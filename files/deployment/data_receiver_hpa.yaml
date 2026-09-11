@@ -1,4 +1,4 @@
-apiVersion: autoscaling/v2beta2
+apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   name: data-receiver-hpa
@@ -13,4 +13,6 @@ spec:
   - type: Resource
     resource:
       name: cpu
-      targetAverageUtilization: 80 # Adjust as per your requirement
+      target:
+        type: Utilization
+        averageUtilization: 80

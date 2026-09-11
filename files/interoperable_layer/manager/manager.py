@@ -5,6 +5,7 @@ import time
 import json
 from kafka import KafkaProducer
 import matplotlib.pyplot as plt
+import psutil
 from simulate_node import SimulatedNode  
 
 # Configure logging
